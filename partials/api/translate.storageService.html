@@ -1,0 +1,113 @@
+<h1><code ng:non-bindable="">storageService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">translate</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="translate-storageservice-page"><p>Service responsible for managing storing and caching processes</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/translate.storage">storage</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/translate.cache">cache</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/translate.events">events</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cachegetlang">cacheGetLang()</h3>
+<div class="cachegetlang"><div class="cachegetlang-page"><p>Return language from cache. 
+If cache disabled will return default language</p>
+</div><h5 id="methods_cachegetlang_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cachegetlang-page"><p>Language</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_cachegettranslations">cacheGetTranslations(lang)</h3>
+<div class="cachegettranslations"><div class="cachegettranslations-page"><p>Return translations hashmap for given language from cache.
+If cache disabled will return empty object</p>
+</div><h5 id="methods_cachegettranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cachegettranslations-page"><p>Language</p>
+</div></td></tr></tbody></table><h5 id="methods_cachegettranslations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="cachegettranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_cachesetlang">cacheSetLang(lang)</h3>
+<div class="cachesetlang"><div class="cachesetlang-page"><p>Put language to cache if it enabled</p>
+</div><h5 id="methods_cachesetlang_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cachesetlang-page"><p>Language</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_cachesettranslations">cacheSetTranslations(lang, values)</h3>
+<div class="cachesettranslations"><div class="cachesettranslations-page"><p>Put given translations hashmap for given language to cache if it enabled</p>
+</div><h5 id="methods_cachesettranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cachesettranslations-page"><p>Language</p>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="cachesettranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_config">config(options)</h3>
+<div class="config"><div class="config-page"><p>Initialize storage service with options (cache info and default language).
+Choose language to work and load translations from cache.
+Always called by <a href="#/api/translate.$translate">$translate</a> during initialization process </p>
+</div><h5 id="methods_config_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="config-page"><p>Options</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getlang">getLang()</h3>
+<div class="getlang"><div class="getlang-page"><p>Return language from storage</p>
+</div><h5 id="methods_getlang_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getlang-page"><p>Language</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettranslation">getTranslation(lang, key)</h3>
+<div class="gettranslation"><div class="gettranslation-page"><p>Return translation for given language and translation key.
+If translation with this key not exist will return key</p>
+</div><h5 id="methods_gettranslation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettranslation-page"><p>Language</p>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettranslation-page"><p>Translation key</p>
+</div></td></tr></tbody></table><h5 id="methods_gettranslation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettranslation-page"><p>Translation</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettranslations">getTranslations(lang)</h3>
+<div class="gettranslations"><div class="gettranslations-page"><p>Return translations hashmap for given language from storage</p>
+</div><h5 id="methods_gettranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gettranslations-page"><p>Language</p>
+</div></td></tr></tbody></table><h5 id="methods_gettranslations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="gettranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setlang">setLang(lang)</h3>
+<div class="setlang"><div class="setlang-page"><p>Put given language to cache and storage.
+Load translations for new language from cache to storage.
+Fire language changed event</p>
+</div><h5 id="methods_setlang_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setlang-page"><p>Language</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_settranslations">setTranslations(lang, values)</h3>
+<div class="settranslations"><div class="settranslations-page"><p>Put given translations for given language into storage and cache. 
+Fire translations updated event</p>
+</div><h5 id="methods_settranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="settranslations-page"><p>Language</p>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="settranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_storagegetlang">storageGetLang()</h3>
+<div class="storagegetlang"><div class="storagegetlang-page"><p>Return language from storage (decorate options.lang)</p>
+</div><h5 id="methods_storagegetlang_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagegetlang-page"><p>Language</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_storagegettranslation">storageGetTranslation(lang, key)</h3>
+<div class="storagegettranslation"><div class="storagegettranslation-page"><p>Return translation for given translation key and language from storage</p>
+</div><h5 id="methods_storagegettranslation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagegettranslation-page"><p>Language</p>
+</div></td></tr><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagegettranslation-page"><p>Translation Key</p>
+</div></td></tr></tbody></table><h5 id="methods_storagegettranslation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagegettranslation-page"><p>Translation</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_storagegettranslations">storageGetTranslations(lang)</h3>
+<div class="storagegettranslations"><div class="storagegettranslations-page"><p>Return translations hashmap for given language from storage</p>
+</div><h5 id="methods_storagegettranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagegettranslations-page"><p>Language</p>
+</div></td></tr></tbody></table><h5 id="methods_storagegettranslations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="storagegettranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_storagesetlang">storageSetLang(lang)</h3>
+<div class="storagesetlang"><div class="storagesetlang-page"><p>Put given language to storage (decorate options.lang)</p>
+</div><h5 id="methods_storagesetlang_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagesetlang-page"><p>Language</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_storagesettranslations">storageSetTranslations(lang, values)</h3>
+<div class="storagesettranslations"><div class="storagesettranslations-page"><p>Put given translations hashmap for given language to storage</p>
+</div><h5 id="methods_storagesettranslations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="storagesettranslations-page"><p>Language</p>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="storagesettranslations-page"><p>Translations Hashmap</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

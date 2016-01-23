@@ -1,0 +1,58 @@
+<h1><code ng:non-bindable="">events</code>
+<div><span class="hint">service in module <code ng:non-bindable="">translate</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="translate-events-page"><p>Service responsible for providing access to library events. 
+Provide list of event objects and you can subscribe to each (see implementation <a href="#/api/translate.event">here</a>). </p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/translate.utils">utils</a></code>
+</li>
+</ul>
+<div class="member event"><h2 id="events">Events</h2>
+<ul class="events"><li><h3 id="events_allpartsloaded">allPartsLoaded</h3>
+<div class="allpartsloaded"><div class="allpartsloaded-page"><p>Fires when all registered parts for some language loaded</p>
+</div><div class="inline"></div>
+<div class="inline"></div>
+<h5 id="events_allpartsloaded_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="allpartsloaded-page"><p>{ lang: language key }</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="events_langchanged">langChanged</h3>
+<div class="langchanged"><div class="langchanged-page"><p>Fires when language changed</p>
+</div><div class="inline"></div>
+<div class="inline"></div>
+<h5 id="events_langchanged_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="langchanged-page"><p>{ from: old language key, to: new language key }</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="events_partloaded">partLoaded</h3>
+<div class="partloaded"><div class="partloaded-page"><p>Fires when any part for any language loaded</p>
+</div><div class="inline"></div>
+<div class="inline"></div>
+<h5 id="events_partloaded_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="partloaded-page"><p>{ part: partname, lang: language key }</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="events_translationsupdated">translationsUpdated</h3>
+<div class="translationsupdated"><div class="translationsupdated-page"><p>Fires when translations for any language updated</p>
+</div><div class="inline"></div>
+<div class="inline"></div>
+<h5 id="events_translationsupdated_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="translationsupdated-page"><p>{ lang: language key }</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="translate-events-page"><pre><code class="lang-javascript">var callback = function (data) { console.log(data); }
+
+// how subscribe ?
+var token = $tranlslateEvents.langChanged.subscribe(callback);
+
+// how unsibscribe ?
+token.unsibscribe();
+
+// how to register one-time callback ?
+var token2 = $tranlslateEvents.langChanged.subscribe(callback, true);
+</code></pre>
+</div></div>
+</div>

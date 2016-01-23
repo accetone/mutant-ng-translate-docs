@@ -1,0 +1,87 @@
+<h1><code ng:non-bindable="">$translate</code>
+<div><span class="hint">service in module <code ng:non-bindable="">translate</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="translate-translate-page"><p>Service responsible for comunication with external code and manage other parts to work mutually</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/translate.storageService">storageService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/translate.loaderService">loaderService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/translate.utils">utils</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addpart">addPart(name)</h3>
+<div class="addpart"><div class="addpart-page"><p>Add part for current language.
+Loading will start automatically</p>
+</div><h5 id="methods_addpart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="addpart-page"><p>Part Name</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_addparts">addParts(name1, [name2])</h3>
+<div class="addparts"><div class="addparts-page"><p>Add parts for current language.
+Loading will start automatically.
+Pass part names as separate params</p>
+</div><h5 id="methods_addparts_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name1</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="addparts-page"><p>Part Name 1</p>
+</div></td></tr><tr><td>[name2]</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="addparts-page"><p>Part Name 2</p>
+</div></td></tr><tr><td>[...]</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="addparts-page"><p>...</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_config">config(options)</h3>
+<div class="config"><div class="config-page"><p>Merge external options with default library options. 
+Initialize <a href="#/api/translate.storageService">storageService</a> and <a href="#/api/translate.loaderService">loaderService</a></p>
+</div><h5 id="methods_config_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="config-page"><p>Options</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_currentlang">currentLang()</h3>
+<div class="currentlang"><div class="currentlang-page"><p>Return current language</p>
+</div><h5 id="methods_currentlang_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="currentlang-page"><p>Language</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_refresh">refresh(force)</h3>
+<div class="refresh"><div class="refresh-page"><p>Call force reload of all added parts for current language</p>
+</div><h5 id="methods_refresh_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>force</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="refresh-page"><p>Force</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_translation">translation(key)</h3>
+<div class="translation"><div class="translation-page"><p>Return translation for current language and given translation key</p>
+</div><h5 id="methods_translation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="translation-page"><p>Translation Key</p>
+</div></td></tr></tbody></table><h5 id="methods_translation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="translation-page"><p>Translation</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_translations">translations(lang)</h3>
+<div class="translations"><div class="translations-page"><p>Return translation hashmap for given language</p>
+</div><h5 id="methods_translations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="translations-page"><p>Language</p>
+</div></td></tr></tbody></table><h5 id="methods_translations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="translations-page"><p>Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_translations">translations(lang, values)</h3>
+<div class="translations"><div class="translations-page"><p>Put given translations hashmap to storage service for given language.
+After that return updated translations hashmap for given language</p>
+</div><h5 id="methods_translations_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="translations-page"><p>Language</p>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="translations-page"><p>Translations Hashmap</p>
+</div></td></tr></tbody></table><h5 id="methods_translations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="translations-page"><p>Updated Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_translations">translations()</h3>
+<div class="translations"><div class="translations-page"><p>Return translation hashmap for current language</p>
+</div><h5 id="methods_translations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="translations-page"><p>Translations Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_use">use(lang)</h3>
+<div class="use"><div class="use-page"><p>Set current language to given and start loading parts for it.
+Do nothing if passed language equal to current</p>
+</div><h5 id="methods_use_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="use-page"><p>Language</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_validateoptions">validateOptions(options)</h3>
+<div class="validateoptions"><div class="validateoptions-page"><p>Throw error if options are corrupt</p>
+</div><h5 id="methods_validateoptions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="validateoptions-page"><p>Options</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

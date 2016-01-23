@@ -1,0 +1,65 @@
+<h1><code ng:non-bindable="">cache</code>
+<div><span class="hint">service in module <code ng:non-bindable="">translate</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="translate-cache-page"><p>Service responsible for caching the translations data and prefered language in local storage, if it supported by browser</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$window">$window</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_existsinlocalstorage">existsInLocalStorage(key)</h3>
+<div class="existsinlocalstorage"><div class="existsinlocalstorage-page"><p>Check if given key exists in local storage</p>
+</div><h5 id="methods_existsinlocalstorage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="existsinlocalstorage-page"><p>Key</p>
+</div></td></tr></tbody></table><h5 id="methods_existsinlocalstorage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="existsinlocalstorage-page"><p>Is Exists</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getfromlocalstorage">getFromLocalStorage(key)</h3>
+<div class="getfromlocalstorage"><div class="getfromlocalstorage-page"><p>Get value by given key from local storage</p>
+</div><h5 id="methods_getfromlocalstorage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getfromlocalstorage-page"><p>Key</p>
+</div></td></tr></tbody></table><h5 id="methods_getfromlocalstorage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object | string</a></td><td><div class="getfromlocalstorage-page"><p>Value</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getlangfromcache">getLangFromCache()</h3>
+<div class="getlangfromcache"><div class="getlangfromcache-page"><p>Return langugage from local storage.
+If local storage not supported or language not exists in local storage will return undefined</p>
+</div><h5 id="methods_getlangfromcache_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string | undefined</a></td><td><div class="getlangfromcache-page"><p>Language</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getvaluesfromcache">getValuesFromCache(lang)</h3>
+<div class="getvaluesfromcache"><div class="getvaluesfromcache-page"><p>Return values hashmap from local storage for given language.
+If local storage not supported or hashmap for given language not exists will return empty object</p>
+</div><h5 id="methods_getvaluesfromcache_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getvaluesfromcache-page"><p>Language</p>
+</div></td></tr></tbody></table><h5 id="methods_getvaluesfromcache_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="getvaluesfromcache-page"><p>Values Hashmap</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_issupportlocalstorage">isSupportLocalStorage()</h3>
+<div class="issupportlocalstorage"><div class="issupportlocalstorage-page"><p>Check if browser support localstorage</p>
+</div><h5 id="methods_issupportlocalstorage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="issupportlocalstorage-page"><p>Is Support</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_puttolocalstorage">putToLocalStorage(key, obj)</h3>
+<div class="puttolocalstorage"><div class="puttolocalstorage-page"><p>Put value into local storage by given key</p>
+</div><h5 id="methods_puttolocalstorage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="puttolocalstorage-page"><p>Key</p>
+</div></td></tr><tr><td>obj</td><td><a href="" class="label type-hint type-hint-object">Object </a><a href="" class="label type-hint type-hint-object"> string</a></td><td><div class="puttolocalstorage-page"><p>Object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setlangtocache">setLangToCache(lang)</h3>
+<div class="setlangtocache"><div class="setlangtocache-page"><p>Put language to local storage.
+If local storage not supported will do nothing</p>
+</div><h5 id="methods_setlangtocache_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setlangtocache-page"><p>Language</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setvaluestocache">setValuesToCache(lang, values)</h3>
+<div class="setvaluestocache"><div class="setvaluestocache-page"><p>Merge local storage hashmap for given language with passed hashmap and put result to local storage.
+If local storage not supported will do nothing</p>
+</div><h5 id="methods_setvaluestocache_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lang</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="setvaluestocache-page"><p>Language</p>
+</div></td></tr><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object&lt;string, string&gt;</a></td><td><div class="setvaluestocache-page"><p>Values Hashmap</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>
