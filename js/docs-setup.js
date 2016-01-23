@@ -100,7 +100,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "translate",
       "shortDescription": "Service responsible for managing storing and caching processes",
-      "keywords": "$translate api cache cachegetlang cachegettranslations cachesetlang cachesettranslations caching called changed choose config default disabled empty enabled event events exist fire getlang gettranslation gettranslations hashmap info initialization initialize key lang language load managing method object options process processes responsible return service setlang settranslations storage storagegetlang storagegettranslation storagegettranslations storageservice storagesetlang storagesettranslations storing string translate translation translations updated values work"
+      "keywords": "$translate api cache cachegetlang cachegettranslations cachesetlang cachesettranslations caching called changed choose config default disabled empty enabled event events exist fire getlang gettranslation gettranslations hashmap info initialization initialize key lang language load managing method object options process processes resolver responsible return service setlang settranslations storage storagegetlang storagegettranslation storagegettranslations storageservice storagesetlang storagesettranslations storing string translate translation translations updated values work"
     },
     {
       "section": "api",
@@ -109,7 +109,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "translate",
       "shortDescription": "Service provides some utility functions like errors, warnings and etc.",
-      "keywords": "$translateutils api changes data default directdatatransformation error errors errorthrow functions javascript library message method passed prefix received return service throw transformation transformed translate translations utility utils values warning warnings warningthrow write"
+      "keywords": "$translateutils api changes code data default directdatatransformation directkeyresolver error errors errorthrow existing external functions javascript key library message method passed prefix received require resolving return service throw transformation transformed translate translations utility utils values warning warnings warningthrow write"
     }
   ],
   "apis": {
