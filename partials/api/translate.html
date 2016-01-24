@@ -2,11 +2,97 @@
 <div><span class="hint"></span>
 </div>
 </h1>
-<div><div class="translate-page"><h3 id="i18n-library-for-angular" id="i18n-library-for-angular">i18n library for angular</h3>
-<p><strong>Key features:</strong></p>
+<div><div class="translate-page"><h2 id="mutant-ng-translate" id="mutant-ng-translate">MUTANT-NG-TRANSLATE</h2>
+<h3 id="general" id="mutant-ng-translate_general">General</h3>
+<p>Internationalization library for Angular applications.  </p>
+<p>For quick start look to official <a href="https://github.com/accetone/mutant-ng-translate">readme file</a>.</p>
+<p><strong>Our key features</strong></p>
 <ul>
-<li>partional load</li>
-<li>parallel loading</li>
-<li>translations &amp; preffered language caching</li>
+<li>native parts mechanism: load your locale files using complex url templates like <code>/locale-{part}-{lang}.json</code>  </li>
+<li>parallel asynchronous loading: translations from part will be available and showed as soon as loaded  </li>
+<li>built-in caching of loaded translations and choosed language using browser localstorage, 
+so next time user will see translations imidiatelly  </li>
+<li>configurable preload that load languages after primary language loaded,
+so you can make switch of language more gentle  </li>
 </ul>
+<h3 id="config-options" id="mutant-ng-translate_config-options">Config options</h3>
+<p><strong>Required options</strong>  </p>
+<p>Url template and default language are only required.
+Other options are optional.</p>
+<pre><code class="lang-javascript">$translate.config({
+     defaultLang: &#39;en&#39;,
+     urlTemplate: &#39;/locale-{part}-{lang}.json&#39;
+});
+</code></pre>
+<p><strong>One file per language</strong></p>
+<p>Url template should contain at least <code>{lang}</code> pattern. 
+So if you have only one file per language, you can specify required template.</p>
+<pre><code class="lang-javascript">$translate.config({
+     defaultLang: &#39;en&#39;,
+     urlTemplate: &#39;/locale/{lang}.json&#39;
+});
+</code></pre>
+<p><strong>Complex JSON file</strong></p>
+<p>If your locale file not plain key-value file, you can pass <code>dataTransformation</code> function with options.
+This function should transfrom you data to plain key-value object (hashmap).
+You can find signature <a href="#/api/translate.utils">here</a> (see <code>directDataTransformation</code>). </p>
+<pre><code class="lang-javascript">$translate.config({
+     ...
+     dataTranformation: funciton (data) {
+         return data.translations;       
+     }
+});
+</code></pre>
+<p><strong>Custom non existing translations</strong></p>
+<p>By default you will see <code>key</code> if translation for this <code>key</code> not exist for current language.
+If you want to change this behaviour you can pass <code>keyResolver</code> function with options.
+This function should receive <code>key</code> and return default translation.
+You can find signature <a href="#/api/translate.utils">here</a> (see <code>directKeyResolver</code>). </p>
+<pre><code class="lang-javascript">$translate.config({
+     ...
+     keyResolver: funciton (key) {
+         return &#39;&#39;;     
+     }
+});
+</code></pre>
+<p><strong>Disable cache</strong></p>
+<p>If you want to disable cache of translations or preferred language in client localstorage
+you can pass <code>cache</code> object with options.</p>
+<pre><code class="lang-javascript">$translate.config({
+     ...
+     cache: {          
+         lang: false,
+
+         // not required to write, default value already true
+         translations: true
+     }
+});
+</code></pre>
+<p><strong>Preload</strong></p>
+<p>You can pass list of languages that will be loaded after first language 
+(in most times it would be default or preferred). 
+This feature can make swithing of languages more smooth.
+Don&#39;t worry, already loaded languages will not load twice.</p>
+<pre><code class="lang-javascript">$translate.config({
+     ...
+     preload: {
+         langs: [&#39;en&#39;, &#39;fr&#39;, &#39;de&#39;]
+     }
+});
+</code></pre>
+<p>Also you can configure preload delay - 
+time after first language loaded and start loading preload languages.</p>
+<pre><code class="lang-javascript">$translate.config({
+     ...
+     preload: {
+         langs: [&#39;en&#39;, &#39;fr&#39;, &#39;de&#39;],
+
+         // in milliseconds
+         delay: 10000
+     }
+});
+</code></pre>
+<p><strong>Events</strong>  </p>
+<p>If you want you can subscribe to library events.
+More information you can find <a href="#/api/translate.events">here</a></p>
 </div></div>

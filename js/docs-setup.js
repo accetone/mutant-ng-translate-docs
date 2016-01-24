@@ -1,6 +1,6 @@
 NG_DOCS={
   "sections": {
-    "api": "API Documentation"
+    "api": "mutant-ng-translate"
   },
   "pages": [
     {
@@ -9,8 +9,8 @@ NG_DOCS={
       "shortName": "translate",
       "type": "overview",
       "moduleName": "translate",
-      "shortDescription": "i18n library for angular",
-      "keywords": "angular api caching features i18n language library load loading overview parallel partional preffered translate translations"
+      "shortDescription": "MUTANT-NG-TRANSLATE",
+      "keywords": "$translate angular api applications asynchronous behaviour browser built-in cache caching change choosed client complex config configurable configure current data datatranformation datatransformation de default defaultlang delay directdatatransformation directkeyresolver disable don en events exist existing false feature features file files find fr funciton function general gentle https imidiatelly internationalization javascript json key key-value keyresolver lang langs language languages library list load loaded loading locale localstorage mechanism milliseconds mutant-ng-translate native object official optional options overview parallel parts pass pattern plain preferred preload primary quick readme receive required return signature smooth start subscribe switch swithing template templates time times transfrom translate translation translations true url urltemplate user utils worry write"
     },
     {
       "section": "api",
@@ -117,7 +117,7 @@ NG_DOCS={
   },
   "__file": "_FAKE_DEST_/js/docs-setup.js",
   "__options": {
-    "startPage": "/api",
+    "startPage": "/api/translate",
     "scripts": [
       "js/angular.min.js",
       "js/angular-animate.min.js",
@@ -127,12 +127,13 @@ NG_DOCS={
       "js/bower_components/marked/marked.min.js"
     ],
     "styles": [],
-    "title": "API Documentation",
+    "title": "mutant-ng-translate",
     "html5Mode": false,
     "editExample": true,
     "navTemplate": false,
     "navContent": "",
     "navTemplateData": {},
+    "titleLink": "/docs/#/api/translate",
     "loadDefaults": {
       "angular": true,
       "angularAnimate": true,
@@ -141,7 +142,7 @@ NG_DOCS={
   },
   "html5Mode": false,
   "editExample": true,
-  "startPage": "/api",
+  "startPage": "/api/translate",
   "scripts": [
     "js/angular.min.js",
     "js/angular-animate.min.js",
