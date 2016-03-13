@@ -31,6 +31,8 @@ So if you have only one file per language, you can specify required template.</p
      defaultLang: &#39;en&#39;,
      urlTemplate: &#39;/locale/{lang}.json&#39;
 });
+
+$translate.addPart(&#39;&#39;);
 </code></pre>
 <p><strong>Complex JSON file</strong></p>
 <p>If your locale file not plain key-value file, you can pass <code>dataTransformation</code> function with options.
