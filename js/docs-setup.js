@@ -55,7 +55,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "translate",
       "shortDescription": "Service responsible for providing access to library events. ",
-      "keywords": "$tranlslateevents access api callback console event events function implementation javascript langchanged library list log objects one-time provide providing register responsible service subscribe token token2 translate true unsibscribe utils var"
+      "keywords": "$translateevents access api callback console event events function implementation javascript langchanged library list log objects one-time provide providing register responsible service subscribe token token2 translate true unsibscribe utils var"
     },
     {
       "section": "api",

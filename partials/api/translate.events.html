@@ -46,13 +46,13 @@ Provide list of event objects and you can subscribe to each (see implementation 
 <div class="example"><div class="translate-events-page"><pre><code class="lang-javascript">var callback = function (data) { console.log(data); }
 
 // how subscribe ?
-var token = $tranlslateEvents.langChanged.subscribe(callback);
+var token = $translateEvents.langChanged.subscribe(callback);
 
 // how unsibscribe ?
 token.unsibscribe();
 
 // how to register one-time callback ?
-var token2 = $tranlslateEvents.langChanged.subscribe(callback, true);
+var token2 = $translateEvents.langChanged.subscribe(callback, true);
 </code></pre>
 </div></div>
 </div>
