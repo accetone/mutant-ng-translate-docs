@@ -19,7 +19,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "translate",
       "shortDescription": "Service responsible for comunication with external code and manage other parts to work mutually",
-      "keywords": "$translate add addpart addparts api automatically call code comunication config corrupt current currentlang default equal error external force hashmap initialize key lang language library loaderservice loading manage merge method mutually name1 names options params parts pass passed refresh reload responsible return separate service set start storage storageservice string throw translate translation translations updated utils validateoptions values work"
+      "keywords": "$translate add addpart addparts api automatically call code comunication config corrupt current default equal error external force hashmap initialize key lang language library loaderservice loading manage merge method mutually name1 names options params parts pass passed refresh reload responsible return separate service set start storage storageservice string throw translate translation translations updated utils validateoptions values work"
     },
     {
       "section": "api",
