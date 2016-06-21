@@ -46,7 +46,7 @@ NG_DOCS={
       "type": "object",
       "moduleName": "translate",
       "shortDescription": "Used to create event objects in translate.events",
-      "keywords": "api automatical call callback callbacks create data delete disposable event events generate generateid list method object objects pass publish registered return specific subscribe subscriber subscribers subscribtion subscription success token translate unique unsubscribe utils"
+      "keywords": "api automatical call callback callbacks create data delete disposable event events generate generateid list method object objects pass publish registered return specific subscribe subscriber subscribers subscribtion subscription success token translate true unique unsubscribe utils"
     },
     {
       "section": "api",

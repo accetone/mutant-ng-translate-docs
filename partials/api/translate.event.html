@@ -16,6 +16,13 @@
 </div><h5 id="methods_generateid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="generateid-page"><p>Id</p>
 </div></td></tr></table></div>
 </li>
+<li><h3 id="methods_once">once(callback)</h3>
+<div class="once"><div class="once-page"><p>Put callback to subscribers list with automatical unsubscribe after one call (short-hand for subscribe(callback, true)).
+Return subscription token, so subscriber can unsubscribe.</p>
+</div><h5 id="methods_once_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="once-page"><p>Event callback</p>
+</div></td></tr></tbody></table><h5 id="methods_once_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="once-page"><p>Subscribtion Token</p>
+</div></td></tr></table></div>
+</li>
 <li><h3 id="methods_publish">publish(data)</h3>
 <div class="publish"><div class="publish-page"><p>Call all registered callbacks and pass given data to them</p>
 </div><h5 id="methods_publish_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="publish-page"><p>Data</p>
