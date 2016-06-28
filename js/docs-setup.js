@@ -109,7 +109,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "translate",
       "shortDescription": "Service provides some utility functions like errors, warnings and etc.",
-      "keywords": "$translateutils api changes code data default directdatatransformation directkeyresolver error errors errorthrow existing external functions javascript key library message method passed prefix received require resolving return service throw transformation transformed translate translations utility utils values warning warnings warningthrow write"
+      "keywords": "$translate $translateutils api changes code complex complexdatatransformation config dasboard dashboard data datatranformation default directdatatransformation directkeyresolver error errors errorthrow example existing external flat functions hallo hello input javascript json key library main menu message method object output passed prefix received require resolving return service throw title transformation transformed transfrom translate translations translator utility utils values warning warnings warningthrow write"
     }
   ],
   "apis": {

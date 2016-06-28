@@ -7,10 +7,42 @@
 <div class="description"><div class="translate-utils-page"><p>Service provides some utility functions like errors, warnings and etc.</p>
 </div></div>
 <div class="member method"><h2 id="methods">Methods</h2>
-<ul class="methods"><li><h3 id="methods_directdatatransformation">directDataTransformation(values)</h3>
+<ul class="methods"><li><h3 id="methods_complexdatatransformation">complexDataTransformation(data)</h3>
+<div class="complexdatatransformation"><div class="complexdatatransformation-page"><p>Transfrom complex object to flat object.
+Translations will be available via &#39;.&#39; (see example)</p>
+</div><h5 id="methods_complexdatatransformation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="complexdatatransformation-page"><p>Data</p>
+</div></td></tr></tbody></table><h5 id="methods_complexdatatransformation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="complexdatatransformation-page"><p>Transformed Values</p>
+</div></td></tr></table><h4 id="methods_complexdatatransformation_example">Example</h4>
+<div class="example"><div class="complexdatatransformation-page"><pre><code class="lang-javascript">$translate.config({
+     ...
+     dataTranformation: $translateUtils.complexDataTransformation
+});
+</code></pre>
+<p>Input:</p>
+<pre><code class="lang-json">{
+  &quot;title&quot;: &quot;Translator&quot;,
+  &quot;dashboard&quot;: {
+    &quot;hello&quot;: &quot;Hallo!&quot;,
+    &quot;menu&quot;: {
+      &quot;main&quot;: &quot;Home&quot;
+    }
+  }
+}
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{
+  &quot;title&quot;: &quot;Translator&quot;,
+  &quot;dashboard.hello&quot;: &quot;Hallo!&quot;,
+  &quot;dasboard.menu.main&quot;: &quot;Home&quot;
+}
+</code></pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_directdatatransformation">directDataTransformation(data)</h3>
 <div class="directdatatransformation"><div class="directdatatransformation-page"><p>Return passed values without changes. 
 Used for default transformation of received translations data</p>
-</div><h5 id="methods_directdatatransformation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>values</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="directdatatransformation-page"><p>Values</p>
+</div><h5 id="methods_directdatatransformation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="directdatatransformation-page"><p>Data</p>
 </div></td></tr></tbody></table><h5 id="methods_directdatatransformation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="directdatatransformation-page"><p>Transformed Values</p>
 </div></td></tr></table></div>
 </li>
