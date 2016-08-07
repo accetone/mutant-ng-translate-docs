@@ -20,7 +20,8 @@
      * - built-in caching of loaded translations and choosed language using browser localstorage, 
      * so next time user will see translations imidiatelly  
      * - configurable preload that load languages after primary language loaded,
-     * so you can make switch of language more gentle  
+     * so you can make switch of language more gentle
+     * - support of angular 1.4.x and higher
      * 
      * ## Config options
      * 
@@ -51,10 +52,14 @@
      * ```
      * 
      * **Complex JSON file**
+     *
+     * If your locale file not plain key-value file, you can use built-in `complexDataTransformation` or pass your
+     * own `dataTransformation` function with options.
+     *
+     * In case you want to use built-in function, see how it works {@link translate.utils here} (see `complexDataTransformation`).
      * 
-     * If your locale file not plain key-value file, you can pass `dataTransformation` function with options.
-     * This function should transfrom you data to plain key-value object (hashmap).
-     * You can find signature {@link translate.utils here} (see `directDataTransformation`). 
+     * Your own should transfrom you data to plain key-value object (hashmap).
+     * You can find signature {@link translate.utils here} (see `directDataTransformation`).
      * 
      * ```javascript
      * $translate.config({
@@ -455,7 +460,7 @@
         self.langChanged = new event($utils);
 
         return self;
-    };
+    }
 
     /**
      * @ngdoc object
@@ -470,6 +475,7 @@
        
         self.subscribers = [];
         self.subscribe = subscribe;
+        self.once = once;
         self.unsubscribe = unsubscribe;
         self.publish = publish;
 
@@ -478,6 +484,7 @@
 
         return {
             subscribe: self.subscribe,
+            once: self.once,
             publish: self.publish
         };
 
@@ -516,6 +523,22 @@
             self.subscribers.push(subscriber);
 
             return subscriber;
+        }
+
+        /**
+         * @ngdoc method
+         * @methodOf translate.event
+         * @name once
+         *
+         * @param {function} callback Event callback
+         * @returns {Object} Subscribtion Token
+         *
+         * @description
+         * Put callback to subscribers list with automatical unsubscribe after one call (short-hand for subscribe(callback, true)).
+         * Return subscription token, so subscriber can unsubscribe.
+         */
+        function once(callback) {
+            return subscribe(callback, true);
         }
 
         /**
@@ -1742,15 +1765,83 @@
          * @methodOf translate.utils
          * @name directDataTransformation
          * 
-         * @param {Object} values Values
+         * @param {Object} data Data
          * @returns {Object} Transformed Values
          * 
          * @description 
          * Return passed values without changes. 
          * Used for default transformation of received translations data
          */
-        self.directDataTransformation = function (values) {
-            return values;
+        self.directDataTransformation = function (data) {
+            return data;
+        };
+
+        /**
+         * @ngdoc method
+         * @methodOf translate.utils
+         * @name complexDataTransformation
+         *
+         * @param {Object} data Data
+         * @returns {Object} Transformed Values
+         *
+         * @description
+         * Transfrom complex object to flat object.
+         * Translations will be available via '.' (see example)
+         *
+         * @example
+         * ```javascript
+         * $translate.config({
+         *      ...
+         *      dataTranformation: $translateUtils.complexDataTransformation
+         * });
+         * ```
+         *
+         * Input:
+         * ```json
+         * {
+         *   "title": "Translator",
+         *   "dashboard": {
+         *     "hello": "Hallo!",
+         *     "menu": {
+         *       "main": "Home"
+         *     }
+         *   }
+         * }
+         * ```
+         *
+         * Output:
+         * ```json
+         * {
+         *   "title": "Translator",
+         *   "dashboard.hello": "Hallo!",
+         *   "dasboard.menu.main": "Home"
+         * }
+         * ```
+         */
+        self.complexDataTransformation = function (data) {
+            if (data == undefined) return;
+
+            return flattenObject(data, '');
+
+            function flattenObject(obj, prefix) {
+                var flat = {};
+
+                for (var p in obj) {
+                    if (!obj.hasOwnProperty(p)) continue;
+
+
+
+                    if (typeof obj[p] === 'string') {
+                        flat[prefix + p] = obj[p]
+                    }
+                    else {
+
+                        angular.merge(flat, flattenObject(obj[p], prefix + p + '.'));
+                    }
+                }
+
+                return flat;
+            }
         };
 
         /**
